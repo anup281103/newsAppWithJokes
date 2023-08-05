@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsWebsite</title>
+    <link rel="stylesheet" href="news.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="pngegg.png" alt="newsLogo" />
+      <div class="headerShortcut">
+        <li onclick="fetchIndianNews()">Home</li>
+        <li onclick="fetchSportsNews()">Sports</li>
+        <li onclick="fetchTechnologyNews()">Technology</li>
+        <li onclick="fetchPoliticsNews()">Politics</li>
+        <a href="joke.html"><button class="JokeFetchButton">Jokes</button></a>
+      </div>
+      <!-- <div class="searchSection">
+        <input type="text" placeholder="eg.Science" id="searchbar" />
+        <button class="searchButton">Search</button>
+      </div> -->
+    </div>
+    <div class="cardContainer"></div>
+    <template class="cardTemplet">
+      <div class="card">
+        <div class="cardImage">
+          <img id="cardImage" src="pngegg.png" alt="News Image" />
+        </div>
+        <div class="cardContent">
+          <div class="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+            illum!
+          </div>
+
+          <div class="cardContentAdditional">
+            <div class="date"></div>
+            <div class="readMoreButton">
+              <button onclick="goToLink()">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+  <script src="news.js"></script>
+</html>

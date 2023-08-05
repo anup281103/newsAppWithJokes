@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Nunito:wght@100&family=Oswald:wght@500&family=Raleway:wght@100&family=Rubik+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.card {
+  margin: 1vmax;
+  height: 20vmax;
+  width: 20vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: solid black 3px;
+  border-radius: 1vmax;
+  overflow: hidden;
+}
+.cardImage {
+  border: solid black 1px;
+  height: 12vmax;
+  width: 20vmax;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5vmax;
+}
+.cardImage img {
+  height: 12vmax;
+  width: 20vmax;
+}
+.navbar {
+  padding: 1vmax;
+  font-family: "Cinzel", serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48 47 88 / 93%);
+}
+.navbar li {
+  margin-left: 1vmax;
+  font-size: 2vmax;
+  text-decoration: underline;
+  list-style-type: none;
+}
+.headerShortcut {
+  gap: 3vmax;
+  color: #d0cc88;
+  text-shadow: 0px 0px 2px #ffed00;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar input {
+  font-size: 1.5vmax;
+  color: #000000;
+  background-color: rgb(242, 242, 242);
+  height: 4vh;
+  width: 15vw;
+  border-radius: 0.5vmax;
+}
+.navbar img {
+  margin-left: 3%;
+  height: 6vmax;
+}
+.searchButton {
+  font-size: 1.5vmax;
+  border-radius: 1vmax;
+  font-family: initial;
+  background-color: #ebf4bc;
+}
+.searchSection {
+  display: flex;
+  align-items: center;
+}
+.JokeFetchButton {
+  padding: 1vmax;
+  border-radius: 1vmax;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  size: 5vmax;
+  background-color: #fffc3ee4;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.cardContentAdditional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.date {
+  font-size: 1vmax;
+}
+.readMoreButton button {
+  font-size: 1.5vmax;
+  border-radius: 1vmax;
+  font-family: initial;
+  background-color: #d42c2cf5;
+}
+.JokeFetchButton :hover {
+  background-color: #e9e63ae4;
+}
+.card:hover {
+  background-color: rgb(243, 243, 243);
+  transform: translateX(0.5px);
+  transform: translateY(-1px);
+}
+.headerShortcut li:hover {
+  cursor: pointer;
+  color: #b7b377;
+  text-shadow: 0px 0px 2px #eada02;
+}
+.searchButton:hover {
+  cursor: pointer;
+  background-color: #d3dba9;
+}
+.readMoreButton button:hover {
+  cursor: pointer;
+  background-color: #d02c2cf5;
+}
