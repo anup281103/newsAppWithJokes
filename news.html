@@ -8,18 +8,36 @@
   </head>
   <body>
     <div class="navbar">
-      <img src="pngegg.png" alt="newsLogo" />
+      <img
+        onclick="fetchIndianNews()"
+        id="newsLogo"
+        src="pngegg.png"
+        alt="newsLogo"
+      />
       <div class="headerShortcut">
-        <li onclick="fetchIndianNews()">Home</li>
         <li onclick="fetchSportsNews()">Sports</li>
         <li onclick="fetchTechnologyNews()">Technology</li>
         <li onclick="fetchPoliticsNews()">Politics</li>
-        <a href="joke.html"><button class="JokeFetchButton">Jokes</button></a>
+        <div class="jokeAndMode">
+          <div>
+            <a id="JokeMode" href="joke.html"
+              ><button class="JokeFetchButton">Jokes</button>
+            </a>
+          </div>
+          <div>
+            <img
+              id="DarkModeButton"
+              onclick="changeTheme()"
+              src="DarkMode.png"
+              alt="DarkMode"
+            />
+          </div>
+        </div>
       </div>
-      <!-- <div class="searchSection">
+      <div class="searchSection">
         <input type="text" placeholder="eg.Science" id="searchbar" />
-        <button class="searchButton">Search</button>
-      </div> -->
+        <button onclick="fetchSearchNews()" class="searchButton">Search</button>
+      </div>
     </div>
     <div class="cardContainer"></div>
     <template class="cardTemplet">
@@ -32,11 +50,11 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
             illum!
           </div>
-
+          <hr />
           <div class="cardContentAdditional">
             <div class="date"></div>
             <div class="readMoreButton">
-              <button onclick="goToLink()">Read More</button>
+              <button onclick="goToLink()"><b>Read More</b></button>
             </div>
           </div>
         </div>
