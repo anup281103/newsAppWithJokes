@@ -16,7 +16,7 @@ html {
 .jokeNavbar {
   display: flex;
   justify-content: flex-start;
-  gap: 20vmax;
+  gap: 35%;
   font-size: 4vmax;
   font-family: "Oswald", sans-serif;
   background-color: #bc58de;
@@ -29,7 +29,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(jokeBGImage.jpg);
-  padding: 10vmax;
+  padding: 3vmax 7vmax 0vmax 7vmax;
   background-size: cover;
 }
 .jokeBox {
@@ -76,16 +76,10 @@ html {
   transform: translateX(0.05vmax);
   transform: translateY(-0.05vmax);
 }
-@media screen and (min-width: 600px) {
-  .jokeBox {
-    margin-right: -9vmax;
-    margin-left: -9vmax;
-    margin-top: -7vmax;
-  }
-}
 @media screen and (max-width: 600px) {
   .jokeBox {
     margin-right: -9vmax;
     margin-left: -9vmax;
+    margin-top: -7vmax;
   }
 }
