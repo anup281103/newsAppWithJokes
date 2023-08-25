@@ -1,37 +1,38 @@
-// apiUrl=https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=aceb93e3c93540bcbd58127f27048c04
-// apiurl=https://newsapi.org/v2/everything?q=tesla&from=2023-07-01&sortBy=publishedAt&apiKey=aceb93e3c93540bcbd58127f27048c04
-let urlIndiaNews = "./IndiaNews.json";
-let urlSports = "./sports.json";
-let urlPolitics = "./politics.json";
-let urlTechnology = "./technology.json";
+apiUrl = "https://newsapi.org/v2/everything?";
+let apiKey = "aceb93e3c93540bcbd58127f27048c04";
+// apiurl=https://newsapi.org/v2/everything?q=tesla&apiKey=aceb93e3c93540bcbd58127f27048c04
+
 let headerShortcut = document.querySelector(".headerShortcut");
 
-DataFetch = async () => {
-  const response = await fetch(`${urlIndiaNews}`);
+DataFetch = async (query) => {
+  const response = await fetch(`${apiUrl}q=${query}&apiKey=${apiKey}`);
   const data = await response.json();
   bindData(data.articles);
 };
-window.addEventListener("load", DataFetch());
+window.addEventListener("load", DataFetch("India"));
 async function fetchIndianNews() {
-  const response = await fetch(`${urlIndiaNews}`);
+  const response = await fetch(`${apiUrl}q=India&apiKey=${apiKey}`);
   const data = await response.json();
   bindData(data.articles);
 }
-async function fetchSportsNews() {
-  const response = await fetch(`${urlSports}`);
-  const data = await response.json();
-  bindData(data.articles);
+function fetchSportsNews() {
+  DataFetch("Sports");
 }
-async function fetchTechnologyNews() {
-  const response = await fetch(`${urlTechnology}`);
-  const data = await response.json();
-  bindData(data.articles);
+function fetchTechnologyNews() {
+  DataFetch("Technology");
 }
-async function fetchPoliticsNews() {
-  const response = await fetch(`${urlPolitics}`);
-  const data = await response.json();
-  bindData(data.articles);
+function fetchPoliticsNews() {
+  DataFetch("Politics");
 }
+let searchbar = document.querySelector("#searchbar");
+async function fetchSearchNews() {
+  let query = searchbar.value;
+  if (!query) {
+    return;
+  }
+  DataFetch(`${query}`);
+}
+
 function bindData(articles) {
   const cardContainer = document.querySelector(".cardContainer");
   const cardTemplet = document.querySelector(".cardTemplet");
@@ -56,4 +57,17 @@ function fillDataInCard(cloneTempletNode, article) {
   goToLink = () => {
     window.location = `${article.url}`;
   };
+}
+let flag = true;
+function changeTheme() {
+  if (flag) {
+    document.querySelector("body").style.cssText =
+      "background:rgb(138, 138, 138);filter: brightness(0.8);color:black";
+
+    flag = false;
+  } else {
+    document.querySelector("body").style.cssText =
+      "background:white;color:black";
+    flag = true;
+  }
 }
